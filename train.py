@@ -1,4 +1,4 @@
-import torch
+#import torch
 from fastai.vision import *
 from fastai.metrics import accuracy
 import os
