@@ -3,6 +3,7 @@ from fastai.vision.transform import get_transforms
 from fastai.vision.learner import cnn_learner
 from fastai.vision.data import ImageDataBunch, imagenet_stats
 from fastai.metrics import accuracy
+from fastai.vision import models
 import os
 import dill
 
