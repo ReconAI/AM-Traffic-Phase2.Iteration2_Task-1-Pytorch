@@ -1,5 +1,7 @@
 #import torch
-from fastai.vision import *
+from fastai.vision.transform import get_transforms
+from fastai.vision.learner import cnn_learner
+from fastai.vision.data import ImageDataBunch
 from fastai.metrics import accuracy
 import os
 import dill
