@@ -6,7 +6,7 @@ from fastai.metrics import accuracy
 import os
 import dill
 
-defaults.device = torch.device('cuda')
+#defaults.device = torch.device('cuda')
 
 DATA_PATH = '/valohai/inputs/dataset/'
 MODEL_PATH = '/valohai/outputs/'
