@@ -12,12 +12,12 @@
         pass-as: -train_steps={v}
         description: Number of steps to run the trainer
         type: integer
-        default: 119
+        default: 162
       - name: val_steps
         pass-as: --val_steps={v}
         description: Number of steps to run the val
         type: integer
-        default: 30
+        default: 70
       - name: learning_rate
         pass-as: --learning_rate={v}
         description: Initial learning rate
