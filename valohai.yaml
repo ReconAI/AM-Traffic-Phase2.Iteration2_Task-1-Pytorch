@@ -1,0 +1,66 @@
+---
+
+- step:
+    name: Train model
+    image: pytorch/pytorch:1.4.0-gpu-py3
+    command: 
+      - pip install --disable-pip-version-check --quiet -r requirements.txt
+      - unzip /valohai/inputs/dataset.zip -d /valohai/inputs/
+      - python3 train.py
+    parameters:
+      - name: train_steps
+        pass-as: -train_steps={v}
+        description: Number of steps to run the trainer
+        type: integer
+        default: 119
+      - name: val_steps
+        pass-as: --val_steps={v}
+        description: Number of steps to run the val
+        type: integer
+        default: 30
+      - name: learning_rate
+        pass-as: --learning_rate={v}
+        description: Initial learning rate
+        type: float
+        default: 0.001
+      - name: dropout
+        pass-as: --dropout={v}
+        description: Keep probability for training dropout
+        type: float
+        default: 0.5
+      - name: batch_size
+        pass-as: --batch_size={v}
+        description: Training batch size (larger batches are usually more efficient on GPUs)
+        type: integer
+        default: 64
+    inputs:
+      - name: dataset
+        default: datum://01709a89-09d7-c50e-56b1-e94265461977
+
+- step:
+    name: Worker environment check
+    image: pytorch/pytorch:1.4.0-gpu-py3
+    command:
+      - pwd
+      - ls -la
+      - nvidia-smi
+      - python --version
+      - nvcc --version | grep release
+      - cat /usr/include/x86_64-linux-gnu/cudnn_v*.h | grep CUDNN_MAJOR -A 2
+
+- endpoint:
+    name: greet
+    image: python:3.6
+    port: 8000
+    server-command: python -m wsgiref.simple_server
+    description: test the serving environment
+
+- endpoint:
+    name: weather-condition
+    description: detect the weather condition
+    image: pytorch/pytorch:1.4.0-gpu-py3
+    wsgi: predict_wsgi:predict_wsgi
+    files:
+      - name: model
+        description: Model output file from pytorch (fastai)
+        path: my_model.pt
