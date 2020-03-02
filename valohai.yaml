@@ -5,7 +5,7 @@
     image: tensorflow/tensorflow:1.14.0-gpu-py3
     command: 
       - pip install --disable-pip-version-check --quiet -r requirements.txt
-      - unzip /valohai/inputs/dataset.zip -d /valohai/inputs/
+      - unzip /valohai/inputs/dataset/dataset.zip -d /valohai/inputs/dataset
       - python3 train.py
     parameters:
       - name: train_steps
