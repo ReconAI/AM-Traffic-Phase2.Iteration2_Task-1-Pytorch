@@ -8,6 +8,7 @@
       - conda install -c fastai fastai 
       - conda install -y --file requirements.txt
       - conda install -c anaconda dill
+      - conda install -c conda-forge unzip
       - unzip /valohai/inputs/dataset/dataset.zip -d /valohai/inputs/dataset
       - python3 train.py
 
