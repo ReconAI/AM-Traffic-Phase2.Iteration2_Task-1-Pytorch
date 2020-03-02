@@ -2,3 +2,11 @@ dill
 torch
 matplotlib
 pandas
+spacy>=2.0.18
+scipy
+packaging
+nvidia-ml-py3
+numexpr
+fastprogress>=0.2.1
+dataclasses
+bottleneck
