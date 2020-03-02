@@ -4,11 +4,12 @@
     name: Train model
     image: pytorch/pytorch:1.3-cuda10.1-cudnn7-runtime
     command:
-      - conda install numpy
-      - conda install --no-deps -c fastai fastai
-      - pip install -r requirements.txt
+      - conda install -y numpy
+      - conda config --append channels fastai
+      - conda install -y --file requirements.txt
       - unzip /valohai/inputs/dataset/dataset.zip -d /valohai/inputs/dataset
       - python3 train.py
+
     parameters:
       - name: train_steps
         pass-as: -train_steps={v}
