@@ -1,14 +1,14 @@
 import torch
 from fastai.vision.transform import get_transforms
 from fastai.vision.learner import cnn_learner
-from fastai.vision.data import ImageDataBunch
+from fastai.vision.data import ImageDataBunch, imagenet_stats
 from fastai.metrics import accuracy
 import os
 import dill
 
 #defaults.device = torch.device('cuda')
 
-DATA_PATH = '/valohai/inputs/dataset/'
+DATA_PATH = '/valohai/inputs/dataset/dataset/'
 MODEL_PATH = '/valohai/outputs/'
 
 # Data augmentation: create a list of flip, rotate, zoom, warp, lighting transforms...
