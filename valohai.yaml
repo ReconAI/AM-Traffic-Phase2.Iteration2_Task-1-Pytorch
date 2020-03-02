@@ -4,7 +4,6 @@
     name: Train model
     image: pytorch/pytorch:1.3-cuda10.1-cudnn7-runtime
     command:
-      - pip install -U numpy
       - pip install -r requirements.txt
       - unzip /valohai/inputs/dataset/dataset.zip -d /valohai/inputs/dataset
       - python3 train.py
