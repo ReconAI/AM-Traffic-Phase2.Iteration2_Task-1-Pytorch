@@ -2,7 +2,7 @@
 
 - step:
     name: Train model
-    image: pytorch/pytorch:1.4.0-cuda10.1-cudnn7-runtime
+    image: pytorch/pytorch:1.4-cuda10.1-cudnn7-runtime
     command: 
       - pip install --disable-pip-version-check --quiet -r requirements.txt
       - unzip /valohai/inputs/dataset.zip -d /valohai/inputs/
@@ -39,7 +39,7 @@
 
 - step:
     name: Worker environment check
-    image: pytorch/pytorch:1.4.0-cuda10.1-cudnn7-runtime
+    image: pytorch/pytorch:1.4-cuda10.1-cudnn7-runtime
     command:
       - pwd
       - ls -la
@@ -58,7 +58,7 @@
 - endpoint:
     name: weather-condition
     description: detect the weather condition
-    image: pytorch/pytorch:1.4.0-cuda10.1-cudnn7-runtime
+    image: pytorch/pytorch:1.4-cuda10.1-cudnn7-runtime
     wsgi: predict_wsgi:predict_wsgi
     files:
       - name: model
