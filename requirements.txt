@@ -1,5 +1,3 @@
-dill
-torch
 matplotlib
 pandas
 scipy
