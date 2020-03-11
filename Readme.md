@@ -46,7 +46,7 @@ Where:
 ## Prediction on video
 You can predict on video using *predict_video_tf.py* script:
 ```sh
-python3 predict_video_torch.py --model ./models/pytorch/weather_model.pt --weights  ./models/pytorch/weights_weather.pth --input ./test_video.mp4 --labels ./weather_labels.json --output output/weather_conditions_pie.avi --size 1
+python3 predict_video_torch.py --model ./models/pytorch/weather_model.pt --weights  ./models/pytorch/weights_weather.pth --input ./test_video.mp4 --labels ./weather_labels.json --output output/weather_conditions.avi --size 1
 ```
 Where:
 * **'model'**: the path of the training model.
