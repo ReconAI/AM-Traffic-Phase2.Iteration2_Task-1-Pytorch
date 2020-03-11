@@ -22,11 +22,14 @@ data = ImageDataBunch.from_folder(DATA_PATH, ds_tfms=tfms, size=224, bs=64, vali
 
 # Get a pretrained model (resnet34) with a custom head that is suitable for our data.
 learn = cnn_learner(data, models.resnet34, metrics=[accuracy])
+learn.model_dir = MODEL_PATH
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 # Fit a model following the 1cycle policy with 15 epochs
 learn.fit_one_cycle(15)
 
-# Save the model (pytorch form .pt)
+# save model parameters
+learn.save('weights')
+# Save the model architecture (pytorch form .pt)
 torch.save(learn.model, MODEL_PATH+'my_model.pt', pickle_module=dill)
 #learn.export(path_model+'export.pkl')
