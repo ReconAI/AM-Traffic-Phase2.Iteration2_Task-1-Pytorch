@@ -27,7 +27,31 @@ Unfortunately the labels are not accurate and have many mistakes and that’s du
 Once the data was ready, a model was built with Fastai (Pytorch). I used the resnet34 architecture pretrained on imagenet dataset. The choice of the architecture was based on the fact that the model must be light weighted in order to be run in realtime on a Jetson Nano device. Therefore, I had to make a compromise between accuracy and lesser number of parameters. Since depth-wise convolutions are known of low accuracy, I didn’t opt for mobilenet. So I found that resnet34 is the best candidate.<br/>  
 The data was augmented using Fastai library.<br/>
 
-The best accuracy obtained is **0.97** (execution **#30** in Valohai).
+The best accuracy obtained is **0.97** (execution **#31** in Valohai).
 This model was obtained with one cycle policy, batch size of *64* samples, image with *(224x224)* size and no layer fine tuned.
 # Testing the model (predict.py)
 To test the performance of the model we run the model on images not included in training and validation datasets.
+## Prediction on images
+You can predict on images using *predict_images_tf.py* script:
+```sh
+python3 predict_images_torch.py --model ./models/pytorch/weather_model.pt --weights  ./models/pytorch/weights_weather.pth --input ./input --output ./output_weather_torch --output ./output_weather_torch --labels ./weather_labels.json
+```
+Where:
+* **'model'**: the path of the training model architecture.
+* **weights**: the path to the parameters of the model.
+* **'input'**: the path of your input images.
+* **'output'**: the path of the output images.
+* **'labels'**: the path of labels json file.
+
+## Prediction on video
+You can predict on video using *predict_video_tf.py* script:
+```sh
+python3 predict_video_torch.py --model ./models/pytorch/weather_model.pt --weights  ./models/pytorch/weights_weather.pth --input ./test_video.mp4 --labels ./weather_labels.json --output output/weather_conditions_pie.avi --size 128
+```
+Where:
+* **'model'**: the path of the training model.
+* **weights**: the path to the parameters of the model.
+* **'input'**: the path of your input vdeo (you have to mention the input video name).
+* **'output'**: the path of the output video (you have to mention the output video name).
+* **'labels'**: the path of labels json file.
+* **'size'**: size of queue for averaging (128 by default). Set the size to 1 if you  don't want to perform any averaging.
