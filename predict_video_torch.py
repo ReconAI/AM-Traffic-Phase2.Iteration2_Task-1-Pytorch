@@ -1,6 +1,6 @@
 # USAGE
-# python3 predict_video_torch.py --model ./models/pytorch/weather_model.pt --weights  ./models/pytorch/weights_weather.pth --input ./test_video.mp4 --labels ./weather_labels.json --output output/weather_conditions_pie.avi --size 1
-# python3 predict_video_torch.py --model ./models/pytorch/road_model.pt --weights  ./models/pytorch/weights_road.pth --input ./test_video.mp4 --labels ./road_labels.json --output ./output_road_torch/road_conditions_pie.avi --size 1
+# python3 predict_video_torch.py --model ./models/pytorch/weather_model.pt --weights  ./models/pytorch/weights_weather.pth --input ./test_video.mp4 --labels ./weather_labels.json --output output/weather_conditions.avi --size 1
+# python3 predict_video_torch.py --model ./models/pytorch/road_model.pt --weights  ./models/pytorch/weights_road.pth --input ./test_video.mp4 --labels ./road_labels.json --output ./output_road_torch/road_conditions.avi --size 1
 # import the necessary packages
 import torch
 import torchvision
