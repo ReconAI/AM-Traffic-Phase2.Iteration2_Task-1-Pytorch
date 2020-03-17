@@ -47,7 +47,7 @@ Where:
 The predictions are displayed on images as follows:
 
 <p align="center">
-  <img src="figures/C0353602_r3_w4_2020-02-10_08-08-40.jpg">
+  <img src="figures/C0355201_r3_w4_2020-02-10_08-04-33.jpg">
 </p>
 
 <p align="center">
