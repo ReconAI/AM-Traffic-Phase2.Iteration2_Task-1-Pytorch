@@ -54,6 +54,12 @@ The predictions are displayed on images as follows:
   <img src="figures/C0355801_r3_w4_2020-02-10_08-04-15.jpg">
 </p>
 
+Predictions metrics calculated on the test dataset:
+
+<p align="center">
+  <img src="figures/classif_report_weather_torch.png">
+</p>
+
 ## Prediction on video
 You can predict on video using *predict_video_tf.py* script:
 ```sh
