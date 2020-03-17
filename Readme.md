@@ -43,7 +43,7 @@ Where:
 * **'output'**: the path of the output images.
 * **'labels'**: the path of labels json file.
 
-## Results
+### Results
 The predictions are displayed on images as follows:
 
 <p align="center">
