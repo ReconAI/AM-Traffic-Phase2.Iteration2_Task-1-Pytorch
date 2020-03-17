@@ -43,6 +43,17 @@ Where:
 * **'output'**: the path of the output images.
 * **'labels'**: the path of labels json file.
 
+## Results
+The predictions are displayed on images as follows:
+
+<p align="center">
+  <img src="figures/C0353602_r3_w4_2020-02-10_08-08-40.jpg">
+</p>
+
+<p align="center">
+  <img src="figures/C0355801_r3_w4_2020-02-10_08-04-15.jpg">
+</p>
+
 ## Prediction on video
 You can predict on video using *predict_video_tf.py* script:
 ```sh
@@ -55,3 +66,4 @@ Where:
 * **'output'**: the path of the output video (you have to mention the output video name).
 * **'labels'**: the path of labels json file.
 * **'size'**: size of queue for averaging (128 by default). Set the size to 1 if you  don't want to perform any averaging.
+
