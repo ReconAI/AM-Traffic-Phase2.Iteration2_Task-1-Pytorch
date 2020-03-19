@@ -5,7 +5,7 @@ from fastai.vision.data import ImageDataBunch, imagenet_stats
 from fastai.metrics import accuracy
 from fastai.vision import models
 import os
-from PIL import Image, ImageFile
+from PIL import ImageFile
 import dill
 
 #defaults.device = torch.device('cuda')
