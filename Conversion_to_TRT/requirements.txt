@@ -1,1 +1,7 @@
-
+tensorflow-gp~=1.15.0
+Keras~=2.2.5
+argparse~=1.4.0
+onnx2keras~=0.018
+onnx~=1.6.0
+onnx-tf~=1.5.0
+torch~=1.4.0
