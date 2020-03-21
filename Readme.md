@@ -74,7 +74,7 @@ Where:
 * **'size'**: size of queue for averaging (128 by default). Set the size to 1 if you  don't want to perform any averaging.
 
 # Conversion to TensorRT
-Conversion of the built pytorch model to TensorRT model.
+Conversion of the built pytorch model to ONNX model to TensorRT model.
 ## Requirement
 * tensorflow-gp~=1.15.0
 * Keras~=2.2.5
@@ -85,11 +85,10 @@ Conversion of the built pytorch model to TensorRT model.
 ## Installation
 ```sh
 pip3 install onnx
+pip3 install onnx2keras
 git clone https://github.com/onnx/onnx-tensorflow.git
 cd onnx-tensorflow
 sudo python3 setup.py install
-cd ..
-pip3 install onnx2keras
 ```
 ## Conversion from pytorch model to keras model
 Use the script *convert_pt_to_keras.py* as follows:
