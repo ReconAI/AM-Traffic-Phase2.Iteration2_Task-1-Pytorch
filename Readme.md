@@ -91,7 +91,7 @@ sudo python3 setup.py install
 cd ..
 pip3 install onnx2keras
 ```
-## Conversion from pytorch model to kerad model
+## Conversion from pytorch model to keras model
 Use the script *convert_pt_to_keras.py* as follows:
 ```sh
 python3 convert_pt_to_keras.py --model ./models/torch/weather_model.pt --weights ./models/torch/weights_weather.pth --keras_path ./models/torch_trt/
@@ -100,6 +100,7 @@ Where:
 * **model**: path to trained serialized model.
 * **weights**: path to the parameters of the model.
 * **keras_path**: path where to save our converted keras model.
+
 Once the script in executed, onnx model and keras model are saved in *keras_path*.
 ## conversion from keras model to tensorRT model
 Use the script *convert_keras_to_trt.py* as follows:
