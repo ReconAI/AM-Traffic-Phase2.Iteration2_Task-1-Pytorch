@@ -1,7 +1,4 @@
-# python3 convert_keras_to_trt.py --trt_path ./models/keras_trt --model ./models/tensorflow/RoadCondi.h5 --output_node dense_1/Softmax
-
-
-# import the needed libraries
+# Import the needed libraries
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 import tensorflow.contrib.tensorrt as trt
