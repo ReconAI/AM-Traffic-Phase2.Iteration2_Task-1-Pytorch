@@ -73,3 +73,43 @@ Where:
 * **'labels'**: the path of labels json file.
 * **'size'**: size of queue for averaging (128 by default). Set the size to 1 if you  don't want to perform any averaging.
 
+# Conversion to TensorRT
+Conversion of the built pytorch model to TensorRT model.
+## Requirement
+* tensorflow-gp~=1.15.0
+* Keras~=2.2.5
+* argparse~=1.4.0
+* onnx2keras~=0.018
+* onnx~=1.6.0
+* torch~=1.4.0
+## Installation
+```sh
+pip3 install onnx
+git clone https://github.com/onnx/onnx-tensorflow.git
+cd onnx-tensorflow
+sudo python3 setup.py install
+cd ..
+pip3 install onnx2keras
+```
+## Conversion from pytorch model to kerad model
+Use the script *convert_pt_to_keras.py* as follows:
+```sh
+python3 convert_pt_to_keras.py --model ./models/torch/weather_model.pt --weights ./models/torch/weights_weather.pth --keras_path ./models/torch_trt/
+```
+Where:
+* **model**: path to trained serialized model.
+* **weights**: path to the parameters of the model.
+* **keras_path**: path where to save our converted keras model.
+Once the script in executed, onnx model and keras model are saved in *keras_path*.
+## conversion from keras model to tensorRT model
+Use the script *convert_keras_to_trt.py* as follows:
+```sh
+python3 convert_keras_to_trt.py --trt_path ./models/keras_trt --model ./models/tensorflow/weather_model.h5 --output_node  test_output/BiasAdd
+```
+Where:
+* **trt_path**: path where to save the converted models.
+* **model**: path to trained serialized keras model.
+* **output_node**:  name of the output node (*test_output/BiasAdd* in our case).
+
+After running this script successfully, in trt_path you will have:
+*checkpoints, tf_model.meta, frozen_model.pb and tensorrt_model.pb.* 
