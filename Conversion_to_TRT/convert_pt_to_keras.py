@@ -1,5 +1,4 @@
-# python3 convert_pt_to_keras.py --model /content/road_model.pt --weights  /content/weights_road.pth --k /content
-
+# Import libraries
 import tensorflow as tf
 import onnx2keras
 from onnx2keras import onnx_to_keras
