@@ -6,7 +6,8 @@ As an output model should classify weather conditions (Clear, Rain, Snow).
 Network should be light enough to run in realtime on a Jetson Nano device.
 
 -------------------------------------------------------------------------------------------------------------------------------
-
+# Requirements
+To be able to install Fastai on Valohai, part of the requirements could be found in *requirements.txt* and you can find the rest of them in the yaml file instructions.
 # Data
 The data was collected during task4. As described in task4, the images were downloaded in AWS S3 bucket and the labels are included in the images’s names whose format is as follows:<br/>
  *'camera-id'\_r'roadConditionCategory'\_w'weatherConditionCategory'\_'measuredTime'*<br/>
