@@ -8,6 +8,22 @@ Network should be light enough to run in realtime on a Jetson Nano device.
 -------------------------------------------------------------------------------------------------------------------------------
 # Requirements
 To be able to install Fastai on Valohai, part of the requirements could be found in *requirements.txt* and you can find the rest of them in the yaml file instructions.
+
+For a normal environment Fastai setup: (Or visit https://docs.fast.ai/install.html )
+```sh
+pip install torch
+pip install fastai
+```
+For Fastai installation on Valohai : (Or check the Yaml file)
+Use the image:
+```sh
+pytorch/pytorch:1.3-cuda10.1-cudnn7-runtime
+```
+```sh
+conda install -y numpy
+conda install -c fastai fastai
+conda install -y --file requirements.txt
+```
 # Data
 The data was collected during task4. As described in task4, the images were downloaded in AWS S3 bucket and the labels are included in the images’s names whose format is as follows:<br/>
  *'camera-id'\_r'roadConditionCategory'\_w'weatherConditionCategory'\_'measuredTime'*<br/>
