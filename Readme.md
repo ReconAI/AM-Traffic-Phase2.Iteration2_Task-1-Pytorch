@@ -35,16 +35,20 @@ This model was obtained with one cycle policy, batch size of *64* samples, image
 # Testing the model (predict.py)
 To test the performance of the model we run the model on images not included in training and validation datasets.
 ## Prediction on images
-You can predict on images using *predict_images_tf.py* script:
-```sh
-python3 predict_images_torch.py --model ./models/pytorch/weather_model.pt --weights  ./models/pytorch/weights_weather.pth --input ./input --output ./output_weather_torch --output ./output_weather_torch --labels ./weather_labels.json
-```
-Where:
-* **'model'**: the path of the training model architecture.
-* **weights**: the path to the parameters of the model.
-* **'input'**: the path of your input images.
-* **'output'**: the path of the output images.
-* **'labels'**: the path of labels json file.
+You can make predictions on images following these steps:
+1. Download *WeatherRoad_EvaluationDataset.zip* from [here](https://drive.google.com/open?id=1MDuIcb1pNqmTAYhkhY_5IegAgPL0dnkH) and extract it to the root folder.
+2. Download Model weights from [here] and put it in the *models* folder in the root folder.
+3. From the root folder execute:
+    ```sh
+    python3 predict_images_torch.py --model ./models/weather_model.pt --weights  ./models/weights_weather.pth --input ./WeatherRoad_EvaluationDataset/weather --output ./output_weather_torch --output ./output_weather_torch --labels ./weather_labels.json
+    ```
+    Where:
+    * **'model'**: the path of the training model architecture.
+    * **weights**: the path to the parameters of the model.
+    * **'input'**: the path of your input images.
+    * **'output'**: the path of the output images.
+    * **'labels'**: the path of labels json file.
+4. Check annotated images in /output_weather_torch folder and network metrics in the terminal window.
 
 ### Results
 The predictions are displayed on images as follows:
