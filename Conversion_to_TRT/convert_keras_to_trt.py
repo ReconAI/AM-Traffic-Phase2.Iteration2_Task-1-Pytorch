@@ -58,7 +58,7 @@ with tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(per_process_gpu_
 trt_graph = trt.create_inference_graph(
     input_graph_def=frozen_graph,# frozen model
     outputs=your_outputs,
-    max_batch_size=2,# specify your max batch size
+    max_batch_size=1,# specify your max batch size
     max_workspace_size_bytes=2*(10**9),# specify the max workspace
     precision_mode="FP32") # precision, can be "FP32" (32 floating point precision) or "FP16"
 
