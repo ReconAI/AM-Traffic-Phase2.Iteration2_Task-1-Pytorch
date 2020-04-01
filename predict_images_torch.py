@@ -23,9 +23,9 @@ ap.add_argument("-m", "--model", required=True,
 ap.add_argument("-w", "--weights", required=True,
 	help="path to the parameters of the model")
 ap.add_argument("-i", "--input", required=True,
-	help="path to our input video")
+	help="path to our input images")
 ap.add_argument("-o", "--output", required=True,
-	help="path to our output video")
+	help="path to our output images")
 ap.add_argument("-l", "--labels", required=True,
 	help="path to the labels")
 
