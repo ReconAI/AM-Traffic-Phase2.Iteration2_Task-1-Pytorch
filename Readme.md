@@ -159,7 +159,7 @@ pip3 install pillow
 5. Choose an image you want to predict and upload it on the same directory as the model and the prediction script **predict_trt.py**.
 6. From the folder where files are uploaded execute:
    ```sh
-   python3 predict_trt.py --input_node test_input --output_node  test_output/BiasAdd --path w_pt_32_tensorrt_model.pb --img_path img0.jpg --labels weather_labels.json --shape_size 224 --time true
+   python3 predict_trt.py --input_node test_input --output_node test_output/BiasAdd --path w_pt_32_tensorrt_model.pb --img_path img0.jpg --labels weather_labels.json --shape_size 224 --time true
    ```
    
    Where:
