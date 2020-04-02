@@ -175,4 +175,5 @@ pip3 install pillow
    For model with 'Foating Point Precision' equal to 32 the **average(sec/frame)** varies from 0.17 to 0.19 and the **fps** varies from 5.28 to 5.59.
    
    For model with 'Foating Point Precision' equal to 16 the **average(sec/frame)** is 0.17 and the **fps** varies from 5.88 to 5.61.
+   
    **PS**: Unfortunately the conversion from Pytorch to ONNX to TRT affects the model accuracy.
