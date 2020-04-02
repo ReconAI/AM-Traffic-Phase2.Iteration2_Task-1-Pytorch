@@ -1,6 +1,3 @@
-# python3 predict_trt --input_node resnet50_input --output_node dense_1/Softmax --path ./model/trt_graph.pb --img_path ./data/img0.jpg --labels road_labels.json --shape_size 512 --time true
-# python3 predict_trt --input_node test_input --output_node  test_output/BiasAdd --path ./model/trt_graph.pb --img_path ./data/img0.jpg --labels road_labels.json --shape_size 512 --time true
-
 import tensorflow as tf
 import numpy as np
 from tensorflow.keras.preprocessing import image
