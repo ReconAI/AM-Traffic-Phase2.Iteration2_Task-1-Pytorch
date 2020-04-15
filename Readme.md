@@ -5,6 +5,8 @@ As an output model should classify weather conditions (Clear, Rain, Snow).
 
 Network should be light enough to run in realtime on a Jetson Nano device.
 
+Detailed description can be found in **page2** in *'AM-Traffic I. Phase 2. Iteration 2 task4.pdf'* file.
+
 -------------------------------------------------------------------------------------------------------------------------------
 # Requirements
 To be able to install Fastai on Valohai, part of the requirements could be found in *requirements.txt* and you can find the rest of them in the yaml file instructions.
