@@ -82,7 +82,7 @@ The predictions are displayed on images as follows:
 Predictions metrics calculated on the test dataset:
 
 <p align="center">
-  <img src="figures/classif_report_weather_torch.png">
+  <img src="figures/classif_report_torch_weather.png">
 </p>
 
 ## Prediction on video
