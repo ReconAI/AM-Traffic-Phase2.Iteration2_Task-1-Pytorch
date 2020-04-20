@@ -41,6 +41,14 @@ The data was collected during task4. As described in task4, the images were down
       * Mediocre snow/sleet (5)
       * Heavy snow/sleet (6)
       
+<p align="center">
+  <img src="figures/dry.jpg" height="250" width="250" title="Clear"/>
+  <img src="figures/rain.jpg" height="250" width="250" title="Raining" /> 
+  <img src="figures/snow.jpg" height="250" width="250" title="Snowing" />
+</p>
+
+**PS**: For 'Rain' and 'Snow', the condition of weather is based on the degree (Weak/Mediocre/Heavy) of Snowfall/Rainfall present in the image. 
+
 Unfortunately the labels are not accurate and have many mistakes and that’s due to different reasons such as the quality of the image, the distance between camera and weather station, sensors errors… so manually checking the labels was necessary. Besides, some categories (like mediocre rain) don’t exist in the collected dataset and some others have small amount of images. That’s why extra data from other cctv cameras was fed to the model. The sources of the added data could be found in ‘added_data.txt’ file.
 # Training the model (train.py)
 The training was made using **1xGPU NVIDIA Tesla K80** (on Microsoft Azure NC6).
