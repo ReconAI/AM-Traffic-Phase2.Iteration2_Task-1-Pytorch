@@ -73,7 +73,7 @@ output_tensor = tf_sess.graph.get_tensor_by_name(output_tensor_name)
 
 # ---------------------------------------------------- Make predictions ------------------------------------------------------------------
 
-img = image.load_img(args['img_path'], target_size=(224,224))
+img = image.load_img(args['img_path'], target_size=(args['shape_size'],args['shape_size']))
 x = image.img_to_array(img)
 x = np.expand_dims(x, axis=0)
 x = keras.applications.resnet.preprocess_input(x)
