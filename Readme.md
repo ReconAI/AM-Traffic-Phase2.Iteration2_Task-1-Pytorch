@@ -96,7 +96,7 @@ Predictions metrics calculated on the test dataset:
 
 ## Prediction on video
 You can make predictions on video following these steps:
-1. Download the test video **test_video.mp4** from [here]() and put it in the root folder.
+1. Download the test video **test_video.mp4** from [here](https://drive.google.com/file/d/1GIuXzv_Ab3JNLYAeQcSyC0uCLzUvvRGr/view?usp=sharing) and put it in the root folder.
 2. Download Model weights from [here](https://drive.google.com/open?id=1LcW1wH_Pq99LD4IPMqow0DjVVFk-lPwn) and put it in the **models** folder in the root folder.
 3. In the root folder create the output directory **output_weather_torch**.
 4. From the root folder execute:
