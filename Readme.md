@@ -13,8 +13,8 @@ To be able to install Fastai on Valohai, part of the requirements could be found
 
 For a normal environment Fastai setup: (Or visit https://docs.fast.ai/install.html )
 ```sh
-pip install torch
-pip install fastai
+python3.6 -m pip install torch==1.4.0
+python3.6 -m pip install fastai==1.0.60
 ```
 For Fastai installation on Valohai : (Or check the Yaml file)
 Use the image:
