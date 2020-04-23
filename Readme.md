@@ -114,7 +114,7 @@ Where:
 # Conversion to TensorRT
 Conversion of the built pytorch model to ONNX model to TensorRT model.
 ## Requirement
-* tensorflow-gp~=1.15.0
+* tensorflow-gpu~=1.15.0
 * Keras~=2.2.5
 * argparse~=1.4.0
 * onnx2keras~=0.018
