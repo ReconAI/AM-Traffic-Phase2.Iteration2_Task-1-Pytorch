@@ -129,10 +129,10 @@ sudo python3 setup.py install
 ```
 ## Conversion from pytorch model to keras model
 1. Download Model weights from [here](https://drive.google.com/open?id=1LcW1wH_Pq99LD4IPMqow0DjVVFk-lPwn) and put it in the **models** folder in the root folder.
-2. In the **models** folder create the directory **torch_trt** where to place the keras model.
+2. In the **models** folder create the directory **torch_keras** where to place the keras model.
 3. From the root folder execute:
 ```sh
-python3 convert_pt_to_keras.py --model ./models/torch/weather_model.pt --weights ./models/torch/weights_weather.pth --keras_path ./models/torch_trt/
+python3 convert_pt_to_keras.py --model ./models/torch/weather_model.pt --weights ./models/torch/weights_weather.pth --keras_path ./models/torch_keras/
 ```
 Where:
 * **model**: path to trained serialized model.
@@ -142,10 +142,10 @@ Where:
 Once the script in executed, onnx model and keras model are saved in *keras_path*.
 ## conversion from keras model to tensorRT model
 Once the previous step is done:
-1. In the **models** folder create the directory **keras_trt** where to place the converted model.
+1. In the **models** folder create the directory **torch_trt** where to place the converted model.
 2. From the root folder execute:
 ```sh
-python3 convert_keras_to_trt.py --trt_path ./models/keras_trt --model ./models/torch_trt/weather_model.h5 --output_node  test_output/BiasAdd
+python3 convert_keras_to_trt.py --trt_path ./models/torch_trt --model ./models/torch_keras/weather_model.h5 --output_node  test_output/BiasAdd
 ```
 Where:
 * **trt_path**: path where to save the converted models.
