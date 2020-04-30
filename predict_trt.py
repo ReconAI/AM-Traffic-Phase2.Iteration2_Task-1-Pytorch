@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Predict the trt model on the 
+Jetson Nano and get fps
+"""
 #import the necessary packages
 from __future__ import print_function
 import argparse
