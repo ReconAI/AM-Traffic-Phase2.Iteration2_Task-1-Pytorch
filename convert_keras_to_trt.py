@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Used for converting the 
+Used for converting the
 keras model into trt
 that can be used on Jetson nano
 """
