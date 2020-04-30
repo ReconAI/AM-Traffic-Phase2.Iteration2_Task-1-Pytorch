@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+To predict images using
+pytorch model
+"""
 # import the necessary packages
 from __future__ import print_function
 import os
