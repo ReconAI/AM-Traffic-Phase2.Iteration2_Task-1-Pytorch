@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Used for converting the
+pytorch model into keras
+"""
 # Import libraries
 import os
 import argparse
