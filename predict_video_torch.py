@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Prediction on video using
+pytorch model
+"""
 # import the necessary packages
 from __future__ import print_function
 import argparse
