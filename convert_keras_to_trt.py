@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Used for converting the 
+keras model into trt
+that can be used on Jetson nano
+"""
 # Import the needed libraries
 from __future__ import print_function
 import os
